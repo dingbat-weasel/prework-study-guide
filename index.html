@@ -80,6 +80,36 @@
       <section class="card" id="git-section">
 
         <h2>Git</h2>
+
+        <h3>Example Workflow</h3>
+        <p>Here is an example Git workflow for reference.</p>
+        <p>We must begin by creating a feature branch, then add changes to the project, and finally merge the feature branch back into main.</p>
+        <ol>
+          <li>In the command line, navigate to the project directory, if you're not already there.</li>
+          <li>Type <b>git status</b> to check which branch you're currently in. You should be in the 'main' branch. If not, switch to the 'main' branch by entering the following Git command: <b>git checkout main</b>.</li>
+          <li>In the command line, pull down the latest 'main' branch by entering <b>git pull origin main</b>.</li>
+          <li>From the 'main' branch, use the following Git command to create a new branch named 'feature/add-html': <b>git checkout -b feature/add-html</b>. You should see the following message in your terminal: <i>Switched to a new branch 'feature/add-html</i>.</li>
+          <li>Let's confirm we're on the new branch by entering the following command into the terminal: <b>git status</b>.</li>
+        </ol>
+        <p>Now changes can be made to the project.</p>
+        <p>The following are the steps taken after we have completed changes to a project. A feature branch was created named 'feature/add-html', we made changes to the project while on this branch, now we are ready to merge those changes into the main branch.</p>
+        <ol>
+          <li>Make sure we are on the 'feature/add-html' branch from our command line. We have to add the changed files in our working directory to the staging area of Git. Use the following command in your terminal to stage your changes: <b>git add -A</b>. We use the 'add -A' command to commit all files in the working branch.</li>
+          <li>Now that all of our changes have been staged, we can commit them to our repository. Use the following command in your terminal to commit the changes: <b>git commit -m "added code to HTML file"</b>. We use the <b>-m</b> flag to associate a message with our commit. Commit messages should be short descriptive messages of the changes implemented. Once completed, our Git repository is now up to date with our working directory.</li>
+          <li>Next, let's make sure that our current branch is up to date before opening a pull request. We need to sync our local branch with the remote branch in GitHub. This is especially important in a team environment in case a team member has added a new feature to the project. The process of syncing and merging code into the GitHub repo is how the project gets continually updated with more features and content from different team members. Use the following command in your terminal to pull in the base branch: <b>git pull origin main</b>. It is a good habit to always pull the base branch into your feature branch before pushing up any code.</li>
+          <li>Let's push up all of our changes by using the following command: <b>git push origin feature/add-html</b>.</li>
+          <li>Now navigate to the repository on GitHub. We need to merge our feature branch into the base branch so that in a real work situation other team members can update their feature branches with an updated version of the project. Once you are in the repository, navigate to the 'feature/add-html' branch using the navigation buttons tab.</li>
+          <li>Click the "Pull Requests" tab at the top.</li>
+          <li>Once on the pull requests page, find and click the "New pull request" button.</li>
+          <li>Now we need to compare the two branches that we want to merge. The base branch that we want to merge into should come first. In our case, this is the 'main' branch. We want to merge our 'feature/add-html' branch, so that is our compare branch.</li>
+          <li>Once on the pull request form, give your PR a title and a short description of the changes.</li>
+          <li>Click the "Create pull request" button.</li>
+          <li>It is time to merge our new feature into our main codebase! Click the "Merge pull request" button and confirm.</li>
+          <li>Navigate back to the 'main' branch in GitHub, and you should see that your changes are now there.</li>
+          <li>Open up our terminal and update our local repository with the new merged-in feature. Use the following commands in your terminal: <b>git checkout main</b> and then: <b>git pull origin main</b>.</li>
+          <li>Let's make sure that we close our HTML issue on GitHub since we have merged in the feature associated with it. Navigate to the "Issues" tab on GitHub.</li>
+          <li>Click the "HTML" issue and then click the "Close issue" button.</li>
+        </ol>
    
       </section>
    
