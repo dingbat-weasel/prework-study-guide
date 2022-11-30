@@ -35,6 +35,11 @@ ol {
 p {
     text-align: center;
     font-size: 20px;
+    margin: 10px;
+}
+
+li {
+    margin: 5px;
 }
 
 .card {
